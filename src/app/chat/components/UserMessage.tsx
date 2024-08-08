@@ -3,14 +3,14 @@
 import { Typography, Box, Avatar } from "@mui/material";
 import { HiveRounded } from "@mui/icons-material";
 import { Message } from "@/types/message";
-import { User } from "@/types/user";
+import { GoogleUser } from "@/types/google-user";
 
 export function UserMessage({
   message,
   user,
 }: {
   message: string; // TODO: replace string with Message type
-  user: User;
+  user: GoogleUser;
 }) {
   console.log(user)
   return (

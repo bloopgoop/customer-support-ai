@@ -2,12 +2,11 @@
 
 import { Button } from "@mui/material";
 import { useRouter } from "next/navigation";
-import { useAuth } from "@/app/providers";
+import { signInWithGoogle } from "@/lib/firebase/auth";
 
 
 export default function LandingPage() {
   const router = useRouter();
-  const { user, signInWithGoogle } = useAuth();
 
   function handleSignIn() {
     signInWithGoogle().then(() => router.push("/explore"));

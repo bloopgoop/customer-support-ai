@@ -18,13 +18,11 @@ import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { BotMessage } from "@/app/chat/components/BotMessage";
 import { UserMessage } from "@/app/chat/components/UserMessage";
-import { useAuth } from "@/app/providers";
 import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
 import "overlayscrollbars/overlayscrollbars.css";
 
 export default function ChatPage() {
   const router = useRouter();
-  const { user } = useAuth();
   const [messages, setMessages] = useState([
     {
       role: "assistant",
@@ -36,13 +34,6 @@ export default function ChatPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [messageLiked, setMessageLiked] = useState(false)
   const messagesEndRef = useRef(null);
-
-  // const EnterKeyDetector = () => {
-  //   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-  //     if (event.key === 'Enter') {
-  //       sendMessage();
-  //     }
-  //   };
 
   const scrollToBottom = () => {
     console.log("scrolling");
@@ -200,7 +191,7 @@ export default function ChatPage() {
                     }}
                   />
                 ) : (
-                  <UserMessage message={message.content} user={user} />
+                  <UserMessage message={message.content} user={{uid:"123"}} />
                 )}
               </Box>
             ))}

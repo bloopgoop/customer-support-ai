@@ -1,5 +1,5 @@
 // Google firebase UserImpl
-export interface User {
+export interface GoogleUser {
     uid: string;
     displayName?: string;
     photoURL?: string;

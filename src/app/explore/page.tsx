@@ -4,10 +4,10 @@ import HistoryCard from "./components/HistoryCard";
 import ChatbotCard from "./components/ChatbotCard";
 import Link from "next/link";
 import { useState } from "react";
-import { useAuth } from "@/app/providers";
 
 export default function Explore() {
-  const { user } = useAuth();
+  const [user, setUser] = useState(null);
+
   return (
     <Container sx={{display: "flex", flexDirection:"column", maxWidth:"900px"}} maxWidth={false}>
 
