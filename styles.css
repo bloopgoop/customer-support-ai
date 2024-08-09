@@ -1,0 +1,216 @@
+:root{
+    --mn-color: white;
+    --hl-color: #FFCF00;
+  
+}
+.line-break {
+    display: inline; /* Default behavior (show breaks) */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    background-image: 
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="173.205" viewBox="0 0 200 173.205"><polygon points="100,0 200,50 200,150 100,200 0,150 0,50" stroke="%23333" fill="none" stroke-width="4"/></svg>');
+    background-size: 100px 86.6025px; 
+    background-repeat: repeat;
+
+}
+
+.logo-text {
+    color: var(--mn-color);
+    padding: 15px 0;
+    text-align: center;
+}
+.highlight {
+    color: var(--hl-color);
+}
+.lp {
+    color: var(--mn-color);
+}
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+    text-align: center;
+}
+.main img {
+    max-width: 100%;
+    height: auto;
+}
+.main h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.main h1 span{
+    display: inline;
+}
+.main p {
+    font-size: 1.2em;
+   
+             
+
+}
+
+.explore-button {
+    display: inline-block;
+    padding: 5px 30px;
+    margin-top: 20px;
+    font-size: 1.4em;
+    color: black;
+    background-color: #FFCF00;
+    ;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.login-button,.menu-button{
+    display: flex;
+    padding: 5px 20px;
+    font-size: 1.2em;
+    color: var(--mn-color);
+    background-color: black;
+    border: 2px solid var(--hl-color);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    justify-content: flex-end;
+    
+}
+.menu-button {
+    display: none;
+   
+
+    
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+}
+.logo-hexagon {
+    width: 40px;
+    height: 25px;
+    background-color: var(--hl-color);
+    position: relative;
+    margin-right: 60px;
+    
+   left:50px;
+}
+.logo-hexagon:before,
+.logo-hexagon:after {
+    content: "";
+    position: absolute;
+    
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    
+}
+.logo-hexagon:before {
+    bottom: 100%;
+    border-bottom: 10.5px solid var(--hl-color);
+
+    
+}
+.logo-hexagon:after {
+    top: 100%;
+    border-top: 10.5px solid var(--hl-color);
+}
+.logo-text {
+    font-size: 1.2em;
+    color: var(--mn-color);
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   margin-top: -15px;  
+
+    
+}
+
+.empty {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 40vh;
+    width: 55%;
+    font-size: 2em;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    margin-top: 20px;
+   
+}
+footer {
+    background-color: black;
+    color: var(--mn-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media (max-width: 600px) {
+    .main p {
+        display: none;
+    }
+    .menu-button {
+        display: inline-block;
+}
+.login-button {
+    display: none;
+}
+.main h1 {
+    font-size: 4.5em;
+   
+    display: inline;
+
+}
+
+.main h1 span{
+    display: block;
+}
+.line-break {
+    display: none; 
+}
+.explore-button{
+    margin-top: 0;
+    padding: 5px 15px;
+}
+.empty {
+    width: 75%;
+    height: 35vh;
+    font-size: 1.5em;
+}
+.header {
+    padding: 0px;
+    margin-top: 0px;
+    font-size: .5em;
+
+    
+
+
+
+}
+
+.logo-hexagon {
+    margin-left: -30px;
+   
+}
+
+.menu-button {
+   
+    margin-right: 20px;
+    font-size: 14px; /* Smaller font size */
+}
+
+}
