@@ -14,6 +14,8 @@ import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import { useAuth } from "@/context/auth-context";
 import { updateChatbotLikes } from "@/app/action";
 import { useState } from "react";
+import Markdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 export function BotMessage({ 
   message, 
@@ -74,7 +76,7 @@ export function BotMessage({
           borderRadius: "15px",
         }}
       >
-        <Typography>{message.content}</Typography>
+        <Markdown remarkPlugins={[remarkGfm]}>{message.content}</Markdown>
         <Box 
           sx={{display: "flex", justifyContent:"flex-end"}}
         >
